@@ -1,20 +1,32 @@
 import { Mail, MapPin, Phone, Send } from "lucide-react"
 import { FaLinkedinIn, FaInstagram, FaDiscord } from "react-icons/fa"
 import { cn } from "../lib/utils"
-import { useToast } from "../hooks/use-toast"
+import toast from "react-hot-toast"
 import { useState } from "react"
 
 export const ContactSection = () => {
-    const { toast } = useToast()
     const [isSubmitting, setIsSubmitting] = useState(false)
     const handleSubmit = (e) => {
         e.preventDefault()
+        const form = e.currentTarget
         setIsSubmitting(true)
+
         setTimeout(() => {
-            toast({
-                title: "Message Sent!",
-                description: "Thank You for your Message. I'll get back to you soon.",
-            })
+            toast.custom((t) => (
+                <div
+                    className={cn(
+                        "pointer-events-auto w-full max-w-sm rounded-md border border-border bg-card p-4 shadow-lg",
+                        "text-foreground transition-all",
+                        t.visible ? "animate-fade-in" : "opacity-0"
+                    )}
+                >
+                    <p className="text-sm font-semibold">Message Sent!</p>
+                    <p className="text-sm text-foreground/80">
+                        Thank you for your message. I'll get back to you soon.
+                    </p>
+                </div>
+            ))
+            form.reset()
             setIsSubmitting(false)
         }, 1500)
     }
@@ -113,11 +125,11 @@ export const ContactSection = () => {
                     </div>
                 </div>
 
-                <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
+                <div className="bg-card p-8 rounded-lg shadow-xs">
                     <h3 className="text-2xl font-semibold mb-6">
                         Send a Message
                     </h3>
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
                             <input type="text"
@@ -147,7 +159,7 @@ export const ContactSection = () => {
                         </div>
                         <button
                             type="submit"
-                            diabled={isSubmitting}
+                            disabled={isSubmitting}
                             className={cn("cosmic-button w-full flex items-center justify-center gap-2")}
 
                         >

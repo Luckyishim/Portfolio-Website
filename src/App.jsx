@@ -2,20 +2,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { NotFound } from "./pages/NotFound"
 import { HomePage } from "./pages/home"
-import { Toaster } from "./components/ui/toaster"
+import { Toaster } from "react-hot-toast"
 
 function App() {
 
 
   return (
     <>
-      <Toaster />
+      <Toaster position="bottom-right" />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Toaster />
       </BrowserRouter>
     </>
   )
