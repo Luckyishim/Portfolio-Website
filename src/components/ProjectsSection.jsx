@@ -1,4 +1,5 @@
-import { ArrowRight, ExternalLink, GitFork } from "lucide-react"
+import { ArrowRight, ExternalLink } from "lucide-react"
+import { FaGithub } from "react-icons/fa"
 
 const projects = [
     {
@@ -81,7 +82,7 @@ export const ProjectsSection = () => {
                                         target="_blank"
                                         className="text-foregone/80 hover:text-primary transition-colors duration-300"
                                     >
-                                        <GitFork size={20} />
+                                        <FaGithub size={20} />
                                     </a>
                                 </div>
                             </div>
