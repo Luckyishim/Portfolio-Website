@@ -32,7 +32,7 @@ export const StarBackground = () => {
                     size: Math.random() * 2 + 1,
                     x: Math.random() * 100,
                     y: Math.random() * 20,
-                    delay: Math.random() * 15,
+                    delay: -(Math.random() * 15),
                     animationDuration: Math.random() * 3 + 3,
                 });
             }
@@ -77,7 +77,7 @@ export const StarBackground = () => {
                         height: meteor.size * 2 + "px",
                         left: meteor.x + "%",
                         top: meteor.y + "%",
-                        animationDelay: meteor.delay + "s",  // missing "s" unit
+                        animationDelay: meteor.delay + "s",
                         animationDuration: meteor.animationDuration + "s",
                     }}
                 />
