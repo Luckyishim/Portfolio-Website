@@ -59,6 +59,25 @@ export const ContactSection = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className="pt-8">
+                        <h4 className="font-medium mb-4" >Connect With Me</h4>
+                        <div className="flex space-x-4 justify-center">
+                            <a href="#">
+
+                            </a>
+                            <a href="#">
+
+                            </a>
+                            <a href="#">
+
+                            </a>
+                            <a href="#">
+
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
