@@ -24,7 +24,7 @@ Currently expanding into full-stack development, driven by a genuine curiosity f
                             Get In Touch
                         </a>
                         {/* CV ko link halne yesma pachi */}
-                        <a href="projects/C.V_Lucky_Rajkarnikar.pdf"
+                        <a href="projects/Lucky_Rajkarnikar_CV_Resume_2026-06-11.pdf"
                             className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300" >
                             Download CV
                         </a>
