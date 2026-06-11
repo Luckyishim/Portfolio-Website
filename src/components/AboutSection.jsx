@@ -11,11 +11,11 @@ export const AboutSection = () => {
                 <div className="space-y-6" >
                     <h3 className="text-2xl font-semibold" >Dedicated Web Developer</h3>
                     <p className="text-muted-forefround" >
-                        Learning to become the Fullstack Developer and trying to work non-stop till I make it happen.
+                       I build web applications that are functional, well-structured, and thought through. 
+                       My work spans React, JavaScript, and responsive design; with a focus on getting the details right.
                     </p>
                     <p className="text-muted-forefround">
-                        Solving Real Life Problems to help make the world a better place,
-                        Getting interested and exciting in how every small details works in coding.
+Currently expanding into full-stack development, driven by a genuine curiosity for how everything connects; from UI to database to deployment.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center" >

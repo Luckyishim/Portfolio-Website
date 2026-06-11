@@ -10,9 +10,8 @@ export const HeroSection = () => {
                     <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2" > Rajkarnikar </span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4" >
-                    Created Beautiful Projects integrating frontend logic.<br />
-                    Learning FullStack to build entire websites on my own from scratch. <br />
-                    Hungry to Learn and Understand More
+                    Building interactive web apps with clean frontend logic.<br/>
+                    On the path to full-stack — and not stopping until I get there.
                 </p>
 
                 <div className=" pt-4 opacity-0 animate-fade-in-delay-4" >
