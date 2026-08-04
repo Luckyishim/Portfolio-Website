@@ -11,11 +11,10 @@ export const AboutSection = () => {
                 <div className="space-y-6" >
                     <h3 className="text-2xl font-semibold" >Dedicated Web Developer</h3>
                     <p className="text-muted-forefround" >
-                       I build web applications that are functional, well-structured, and thought through. 
-                       My work spans React, JavaScript, and responsive design; with a focus on getting the details right.
+                        I build web applications that are functional, well-structured, and thought through. My work spans React, JavaScript, and full-stack development with the MERN stack, with a focus on getting the details right.
                     </p>
                     <p className="text-muted-forefround">
-Currently expanding into full-stack development, driven by a genuine curiosity for how everything connects; from UI to database to deployment.
+                        Currently deepening my full-stack skills, building complete applications from authentication and database design to deployment, driven by a genuine curiosity for how everything connects.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center" >
@@ -37,8 +36,8 @@ Currently expanding into full-stack development, driven by a genuine curiosity f
                                 <Code className="h-6 w-6 text-primary" />
                             </div>
                             <div className="text-left" >
-                                <h4 className="font-semibold text-lg" >  Frontend Developer</h4>
-                                <p className="text-muted-foreground" > Create various website with only basic frontend logics</p>
+                                <h4 className="font-semibold text-lg" > Full-Stack Developer</h4>
+                                <p className="text-muted-foreground" > Build complete web applications with React frontends and Node.js/Express backends, connected to MongoDB.</p>
                             </div>
                         </div>
                     </div>
