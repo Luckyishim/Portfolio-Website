@@ -4,15 +4,6 @@ import { FaGithub } from "react-icons/fa"
 const projects = [
     {
         id: 1,
-        title: "Codelecta",
-        description: "Responsive Website made to understand simple coding languages using HTML/CSS.",
-        image: "/projects/Project1.png",
-        tags: ["HTML/CSS", "JavaScript"],
-        demoUrl: "https://codelecta.surge.sh/",
-        githubUrl: "https://github.com/Codelecta/Codelecta.git",
-    },
-    {
-        id: 2,
         title: "Quote-Collector",
         description: "A quote management app that lets users collect, organize, and quickly find meaningful quotes using smart search, categories, and personal collections.",
         image: "/projects/Project2.png",
@@ -21,13 +12,22 @@ const projects = [
         githubUrl: "https://github.com/Luckyishim/Quote-Collector.git",
     },
     {
-        id: 3,
+        id: 2,
         title: "Memoire-Journals",
         description: "A journaling web app with a rich text editor, timeline-based navigation, people tracking for a more organized and contextual writing experience.",
         image: "/projects/Project3.png",
         tags: ["React.JS", "CSS", "FireBase"],
         demoUrl: "https://memoire-0610.web.app",
         githubUrl: "https://github.com/Luckyishim/Memoire-Journals.git",
+    },
+    {
+        id:3,
+        title: "Expenses Tracker",
+        description: "A full-stack expense-tracking application for recording income and expenses, reviewing balances, and viewing monthly category summaries. Every account has its own protected transactions and profile.",
+        image: "/projects/Project4.png",
+        tags:["React.JS", "Node.JS", "Express.JS", "MongoDB"],
+        demourl:"https://expenses-tracker-lime-seven.vercel.app/",
+        githubUrl: "https://github.com/Luckyishim/Expenses-Tracker",
     },
 ]
 
