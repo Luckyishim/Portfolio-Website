@@ -1,17 +1,75 @@
-# React + Vite
+# Lucky Rajkarnikar — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio website for **Lucky Rajkarnikar**, showcasing featured projects, technical skills, background, and contact information. The site uses a polished, space-inspired interface with light and dark themes.
 
-Currently, two official plugins are available:
+## Live site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[View the deployed portfolio](https://portfolio-website-two-ruddy-31.vercel.app/)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive single-page layout with smooth section navigation
+- Hero, About, Skills, Projects, and Contact sections
+- Filterable skills by category
+- Featured project cards with live-demo and GitHub links
+- Light/dark theme toggle with the selected theme saved locally
+- Animated star background and UI transitions
+- Contact form with a submission confirmation message
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Portfolio-Website
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Router](https://reactrouter.com/)
+- [Lucide React](https://lucide.dev/) and React Icons
+- [Vercel](https://vercel.com/) for deployment
+
+## Run locally
+
+### Prerequisites
+
+- Node.js 18 or later
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/Luckyishim/Portfolio-Website.git
+cd Portfolio-Website
+npm install
+npm run dev
+```
+
+Vite will print the local development URL, typically `http://localhost:5173`.
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Starts the Vite development server. |
+| `npm run build` | Creates an optimized production build in `dist/`. |
+| `npm run preview` | Serves the production build locally. |
+| `npm run lint` | Runs ESLint across the project. |
+
+## Project structure
+
+```text
+src/
+├── components/    # Reusable page sections and UI components
+├── pages/         # Home and fallback pages
+├── assets/        # Local image assets
+├── lib/           # Shared utilities
+├── App.jsx        # Application routes
+└── main.jsx       # React entry point
+```
+
+## Contact
+
+- Email: [luckyrajkarnikar@gmail.com](mailto:luckyrajkarnikar@gmail.com)
+- LinkedIn: [Lucky Rajkarnikar](https://www.linkedin.com/in/lucky-rajkarnikar-867709206/)
+- GitHub: [@Luckyishim](https://github.com/Luckyishim)
+
+## License
+
+This project is intended as a personal portfolio. Feel free to use it as inspiration, but please do not present its content as your own.
