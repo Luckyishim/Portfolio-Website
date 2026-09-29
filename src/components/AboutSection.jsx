@@ -1,4 +1,4 @@
-import { Code, PenLine, User } from "lucide-react"
+import { Code, Lightbulb, User } from "lucide-react"
 
 export const AboutSection = () => {
     return <section id="about" className="py-24 px-4 relative" >
@@ -54,11 +54,11 @@ export const AboutSection = () => {
                     <div className="gradient-border p-6 card-hover">
                         <div className="flex items-start gap-4" >
                             <div className="p-3 rounded-full bg-primary/10" >
-                                <PenLine className="h-6 w-6 text-primary" />
+                                <Lightbulb className="h-6 w-6 text-primary" />
                             </div>
                             <div className="text-left" >
-                                <h4 className="font-semibold text-lg"  > Content & Writing</h4>
-                                <p className="text-muted-foreground" > Write blog posts and social content on Nepali culture, travel, and trekking.</p>
+                                <h4 className="font-semibold text-lg"  > Problem Solving</h4>
+                                <p className="text-muted-foreground" > Break down ideas into clear, practical solutions with attention to both users and details.</p>
                             </div>
                         </div>
                     </div>

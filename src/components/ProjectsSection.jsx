@@ -44,32 +44,34 @@ export const ProjectsSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >
                 {projects.map((project, key) => (
                     <div key={key}
-                        className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full" >
+                        className="group bg-card rounded-2xl border border-border shadow-xs card-hover flex flex-col h-full overflow-hidden" >
 
-                        <div className="h-48 overflow-hidden" >
+                        <div className="p-4 pb-0">
+                            <div className="aspect-[16/10] overflow-hidden rounded-xl border border-border bg-secondary/30">
                             <img
                                 src={project.image}
                                 alt={project.title}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            </div>
                         </div>
 
-                        <div className="p-6 flex flex-col flex-1" >
-                            <div className="flex flex-wrap gap-2 mb-4" >
+                        <div className="p-6 flex flex-col flex-1 text-left" >
+                            <div className="flex flex-wrap content-start gap-2 min-h-14 mb-4" >
                                 {project.tags.map((tag) => (
-                                    <span className="px-2 py-1 text-xs font-medium rounded-full bg-primary/20 text-secondary-foreground">
+                                    <span key={tag} className="px-3 py-1 text-xs font-medium rounded-full bg-primary/20 text-secondary-foreground">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
 
 
-                            <h3 className="text-xl font-semibold mb-1" >
+                            <h3 className="text-2xl font-semibold mb-3" >
                                 {project.title}
                             </h3>
-                            <p className="text-muted-foreground text-sm mb-6" >
+                            <p className="text-muted-foreground leading-relaxed mb-6" >
                                 {project.description}
                             </p>
-                            <div className="flex justify-between items-center mt-auto" >
+                            <div className="flex items-center mt-auto pt-5 border-t border-border" >
                                 <div className="flex space-x-3" >
                                     <a href={project.demoUrl}
                                         target="_blank"
