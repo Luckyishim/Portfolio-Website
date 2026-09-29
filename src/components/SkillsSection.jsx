@@ -3,24 +3,24 @@ import { cn } from "../lib/utils"
 
 const skills = [
     // Languages
-    { name: "HTML/CSS", level: 70, category: "languages" },
-    { name: "JavaScript", level: 60, category: "languages" },
-    { name: "Java", level: 40, category: "languages" },
+    { name: "HTML/CSS", category: "languages" },
+    { name: "JavaScript", category: "languages" },
+    { name: "Java", category: "languages" },
 
     // Frameworks & Libraries
-    { name: "React.js", level: 50, category: "frameworks" },
-    { name: "Node.js", level: 40, category: "frameworks" },
-    { name: "Express.js", level: 60, category: "frameworks" },
-    { name: "Firebase", level: 20, category: "frameworks" },
+    { name: "React", category: "frameworks" },
+    { name: "Node.js", category: "frameworks" },
+    { name: "Express.js", category: "frameworks" },
+    { name: "Firebase", category: "frameworks" },
 
     // Database
-    { name: "MongoDB", level: 50, category: "database" },
+    { name: "MongoDB", category: "database" },
 
     // Tools & Practices
-    { name: "Git/GitHub", level: 80, category: "tools" },
-    { name: "Figma", level: 50, category: "tools" },
-    { name: "VS Code", level: 80, category: "tools" },
-    { name: "Postman", level: 60, category: "tools" },
+    { name: "Git/GitHub", category: "tools" },
+    { name: "Figma", category: "tools" },
+    { name: "VS Code", category: "tools" },
+    { name: "Postman", category: "tools" },
 ]
 const categories = ["all", "languages", "frameworks", "database", "tools"]
 
@@ -52,23 +52,11 @@ export const SkillsSection = () => {
                 ))}
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" >
-                {filteredSkills.map((skill, key) => (
-                    <div
-                        key={key}
-                        className="bg-card p-6 rounded-lg shadow-xs card-hover"
-                    >
-
-                        <div className="text-left mb-4" >
-                            <h3 className="font-semibold text-lg" >{skill.name}</h3>
-                        </div>
-                        <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden" >
-                            <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out"
-                                style={{ width: skill.level + "%" }} />
-                        </div>
-                        <div className="text-right mt-1" >
-                            <span className="text-sm text-muted-foreground" >{skill.level}%</span> </div>
-                    </div>
+            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+                {filteredSkills.map((skill) => (
+                    <span key={skill.name} className="px-4 py-2 text-sm rounded-full bg-primary/20 text-secondary-foreground">
+                        {skill.name}
+                    </span>
                 ))}
             </div>
         </div>

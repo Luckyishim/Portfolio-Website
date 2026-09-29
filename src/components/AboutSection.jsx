@@ -1,4 +1,4 @@
-import { Code, GitBranch, User } from "lucide-react"
+import { Code, PenLine, User } from "lucide-react"
 
 export const AboutSection = () => {
     return <section id="about" className="py-24 px-4 relative" >
@@ -9,9 +9,9 @@ export const AboutSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center" >
                 <div className="space-y-6" >
-                    <h3 className="text-2xl font-semibold" >Dedicated Web Developer</h3>
+                    <h3 className="text-2xl font-semibold" >Web Developer & UX Designer</h3>
                     <p className="text-muted-forefround" >
-                        I build web applications that are functional, well-structured, and thought through. My work spans React, JavaScript, and full-stack development with the MERN stack, with a focus on getting the details right.
+                        I build web applications and user experiences that are functional, well-structured, and thoughtfully designed. My work spans React, JavaScript, UX design, and full-stack development with the MERN stack.
                     </p>
                     <p className="text-muted-forefround">
                         Currently deepening my full-stack skills, building complete applications from authentication and database design to deployment, driven by a genuine curiosity for how everything connects.
@@ -22,8 +22,7 @@ export const AboutSection = () => {
                             className="cosmic-button" >
                             Get In Touch
                         </a>
-                        {/* CV ko link halne yesma pachi */}
-                        <a href="/public/projects/C.V_Lucky_Rajkarnikar.pdf"
+                        <a href="/cv.pdf"
                             className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300" >
                             Download CV
                         </a>
@@ -47,19 +46,19 @@ export const AboutSection = () => {
                                 <User className="h-6 w-6 text-primary" />
                             </div>
                             <div className="text-left" >
-                                <h4 className="font-semibold text-lg" > Design UI </h4>
-                                <p className="text-muted-foreground" > Design basic UI on Figma for creating frontend applicaton </p>
+                                <h4 className="font-semibold text-lg" > UX Design </h4>
+                                <p className="text-muted-foreground" > UX design in Figma: wireframing, prototyping, and usability evaluation.</p>
                             </div>
                         </div>
                     </div>
                     <div className="gradient-border p-6 card-hover">
                         <div className="flex items-start gap-4" >
                             <div className="p-3 rounded-full bg-primary/10" >
-                                <GitBranch className="h-6 w-6 text-primary" />
+                                <PenLine className="h-6 w-6 text-primary" />
                             </div>
                             <div className="text-left" >
-                                <h4 className="font-semibold text-lg"  > Uploaded to Github</h4>
-                                <p className="text-muted-foreground" > Used Github to store and show the deployed projects</p>
+                                <h4 className="font-semibold text-lg"  > Content & Writing</h4>
+                                <p className="text-muted-foreground" > Write blog posts and social content on Nepali culture, travel, and trekking.</p>
                             </div>
                         </div>
                     </div>

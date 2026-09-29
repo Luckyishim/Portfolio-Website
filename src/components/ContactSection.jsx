@@ -1,34 +1,38 @@
 import { Mail, MapPin, Phone, Send } from "lucide-react"
-import { FaLinkedinIn, FaInstagram, FaDiscord } from "react-icons/fa"
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa"
 import { cn } from "../lib/utils"
-import toast from "react-hot-toast"
 import { useState } from "react"
+import emailjs from "@emailjs/browser"
 
 export const ContactSection = () => {
     const [isSubmitting, setIsSubmitting] = useState(false)
-    const handleSubmit = (e) => {
+    const [formStatus, setFormStatus] = useState(null)
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
         const form = e.currentTarget
-        setIsSubmitting(true)
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-        setTimeout(() => {
-            toast.custom((t) => (
-                <div
-                    className={cn(
-                        "pointer-events-auto w-full max-w-sm rounded-md border border-border bg-card p-4 shadow-lg",
-                        "text-foreground transition-all",
-                        t.visible ? "animate-fade-in" : "opacity-0"
-                    )}
-                >
-                    <p className="text-sm font-semibold">Message Sent!</p>
-                    <p className="text-sm text-foreground/80">
-                        Thank you for your message. I'll get back to you soon.
-                    </p>
-                </div>
-            ))
+        if (!serviceId || !templateId || !publicKey) {
+            setFormStatus({ type: "error", message: "The contact form is not configured yet. Please try again later." })
+            return
+        }
+
+        setIsSubmitting(true)
+        setFormStatus(null)
+
+        try {
+            await emailjs.sendForm(serviceId, templateId, form, { publicKey })
             form.reset()
+            setFormStatus({ type: "success", message: "Message sent! Thank you — I'll get back to you soon." })
+        } catch (error) {
+            console.error("EmailJS send failed:", error)
+            setFormStatus({ type: "error", message: "Sorry, your message could not be sent. Please try again or email me directly." })
+        } finally {
             setIsSubmitting(false)
-        }, 1500)
+        }
     }
 
 
@@ -113,13 +117,13 @@ export const ContactSection = () => {
                                 <FaInstagram className="h-5 w-5" />
                             </a>
                             <a
-                                href="https://discord.com/channels/@me"
+                                href="https://github.com/Luckyishim"
                                 target="_blank"
                                 rel="noreferrer"
-                                aria-label="Discord"
+                                aria-label="GitHub"
                                 className="p-3 rounded-full border border-border bg-card text-foreground hover:text-primary hover:border-primary transition-colors duration-300"
                             >
-                                <FaDiscord className="h-5 w-5" />
+                                <FaGithub className="h-5 w-5" />
                             </a>
                         </div>
                     </div>
@@ -166,6 +170,11 @@ export const ContactSection = () => {
                             {isSubmitting ? "Sending..." : "Send Message"}
                             <Send size={16} />
                         </button>
+                        {formStatus && (
+                            <p role="status" className={cn("text-sm", formStatus.type === "success" ? "text-primary" : "text-destructive")}>
+                                {formStatus.message}
+                            </p>
+                        )}
                     </form>
                 </div>
             </div>
