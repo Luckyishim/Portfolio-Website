@@ -9,6 +9,14 @@ const designProjects = [
         prototypeUrl: "https://www.figma.com/proto/9JGZJhE9fqqnsFls9nvJ7G/Syaphale-On-The-Way-Project?node-id=238-74&t=cKe9z0kUhZnQ1N4i-1",
         designFileUrl: "https://www.figma.com/design/9JGZJhE9fqqnsFls9nvJ7G/Syaphale-On-The-Way-Project?node-id=238-74&t=cKe9z0kUhZnQ1N4i-1",
     },
+    {
+        id: 2,
+        title: "Personal Trainer Booking Platform",
+        subtitle: "UI design for a personal trainer booking platform",
+        description: "Designed a high-fidelity mobile app for finding and booking personal trainers. Built a design system and 7 screens covering discovery, booking, and chat.",
+        prototypeUrl: "https://www.figma.com/proto/mbcmbECWw4I3NtXcjgRgxh/Booking-System?node-id=0-1&t=UXHs7VYcmrXX2u7f-1",
+        designFileUrl: "https://www.figma.com/design/mbcmbECWw4I3NtXcjgRgxh/Booking-System?node-id=0-1&t=UXHs7VYcmrXX2u7f-1",
+    },
 ]
 
 export const DesignSection = () => {
@@ -23,11 +31,11 @@ export const DesignSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {designProjects.map((project) => (
-                    <article key={project.id} className="bg-card rounded-lg p-6 md:p-8 shadow-xs card-hover text-left">
+                    <article key={project.id} className="h-full bg-card rounded-lg p-6 md:p-8 shadow-xs card-hover text-left flex flex-col">
                         <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
                         <p className="text-primary font-medium mb-4">{project.subtitle}</p>
                         <p className="text-muted-foreground mb-6">{project.description}</p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="mt-auto grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <a
                                 href={project.prototypeUrl}
                                 target="_blank"
