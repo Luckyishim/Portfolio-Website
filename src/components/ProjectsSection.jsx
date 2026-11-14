@@ -29,6 +29,15 @@ const projects = [
         demoUrl:"https://expenses-tracker-lime-seven.vercel.app/",
         githubUrl: "https://github.com/Luckyishim/Expenses-Tracker",
     },
+    {
+        id:4,
+        title: "Task Manager",
+        description: "A full-stack expense-tracking application for recording income and expenses, reviewing balances, and viewing monthly category summaries. Every account has its own protected transactions and profile.",
+        image: "/projects/Project5.png",
+        tags:["React.JS", "Node.JS", "Express.JS", "MongoDB"],
+        demoUrl:"https://task-manager.luckyrajkarnikar.workers.dev/",
+        githubUrl: "https://github.com/Luckyishim/Task-Manager",
+    },
 ]
 
 export const ProjectsSection = () => {
